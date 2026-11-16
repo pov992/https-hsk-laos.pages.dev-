@@ -1,0 +1,160 @@
+:root{
+  --paper:#FBF7F0;
+  --paper-2:#FFFDF8;
+  --ink:#1C2A26;
+  --ink-soft:#4A5C55;
+  --muted:#7C8A83;
+  --line:#E4DCCD;
+  --accent:#0E6E5C;
+  --accent-soft:#DDEDE7;
+  --warm:#C25E2E;
+  --warm-soft:#F7E3D8;
+  --shadow:0 10px 30px rgba(28,42,38,.07);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(900px 500px at 85% -10%, #EAF2EC 0%, transparent 60%),
+    radial-gradient(700px 400px at -10% 10%, #F8EADF 0%, transparent 55%),
+    var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans SC","Microsoft YaHei","PingFang SC","Noto Sans Lao","Leelawadee UI",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:min(880px,calc(100% - 32px));margin-inline:auto}
+a{color:inherit}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:30;background:rgba(251,247,240,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.back{text-decoration:none;font-size:13px;color:var(--ink-soft);white-space:nowrap}
+.back:hover{color:var(--accent)}
+.tb-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+@media (max-width:430px){.tb-tools{max-width:100%}.badge{white-space:normal;padding:4px 9px}}
+.opt{font:inherit;font-size:12px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);border-radius:999px;padding:5px 12px;cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--accent);color:var(--accent)}
+.badge{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:5px 11px;white-space:nowrap}
+
+.loading{padding:60px 0;text-align:center;color:var(--muted)}
+
+/* hero */
+.hero{padding:30px 0 6px}
+.kicker{margin:0 0 6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--warm);font-weight:700}
+.hero h1{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0 0 6px;letter-spacing:.01em}
+.py-title{margin:0;font-size:14px;letter-spacing:.06em;color:var(--accent)}
+.lo-title{margin:2px 0 0;font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;font-size:15px;color:var(--ink-soft)}
+
+.objectives{margin-top:18px;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.objectives h2{font-size:13px;margin:0 0 8px;color:var(--ink-soft);font-weight:600;letter-spacing:.02em}
+.objectives ul{margin:0;padding-left:18px}
+.objectives li{margin:4px 0;font-size:14px}
+.objectives li .lo{display:block;font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;font-size:12.5px;color:var(--muted);line-height:1.55}
+
+/* section */
+.section{margin-top:26px;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.section-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:12px;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.section-head h2{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;margin:0}
+.section-head .en{font-size:11px;color:var(--muted);letter-spacing:.06em}
+.section-head .lo{font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;font-size:11.5px;color:var(--muted);margin-left:auto}
+.scene{margin:0 0 14px;font-size:13px;color:var(--ink-soft)}
+.scene span{font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif}
+
+/* dialogue */
+.dialogue{display:flex;flex-direction:column;gap:12px}
+.line{display:flex;gap:10px;align-items:flex-start}
+.line.b{flex-direction:row-reverse}
+.avatar{flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:700;background:var(--accent-soft);color:var(--accent);font-family:"Noto Serif SC","Songti SC","SimSun",serif}
+.line.b .avatar{background:var(--warm-soft);color:var(--warm)}
+.bubble{background:#fff;border:1px solid var(--line);border-radius:14px;padding:9px 13px;max-width:min(560px,80%)}
+.line.b .bubble{background:#FDF6F1;border-color:#EFDCCF;text-align:right}
+.speaker{margin:0 0 2px;font-size:11px;color:var(--muted);letter-spacing:.02em}
+.zh-line{margin:0;font-size:17px;line-height:1.65;font-family:"Noto Sans SC","Microsoft YaHei","PingFang SC",sans-serif}
+.py-line{margin:2px 0 0;font-size:12px;letter-spacing:.03em;color:var(--accent)}
+.lo-line{margin:3px 0 0;font-size:13.5px;color:var(--ink-soft);font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;line-height:1.65}
+.audio{flex:0 0 auto;margin-top:6px;border:1px solid var(--line);background:#fff;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:14px;line-height:1;padding:0}
+.audio:hover{border-color:var(--accent);background:var(--accent-soft)}
+
+/* table */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14px}
+thead th{text-align:left;font-size:11px;letter-spacing:.06em;color:var(--muted);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody td{padding:8px;border-bottom:1px solid #F1EADC;vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+td.w{font-size:16px;font-weight:500;white-space:nowrap}
+td.p{color:var(--accent);font-size:12.5px;white-space:nowrap}
+td.l{font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;font-size:13.5px;color:var(--ink-soft)}
+td.pos{color:var(--muted);font-size:11.5px;white-space:nowrap}
+td .audio{width:26px;height:26px;margin:0}
+
+/* notes */
+.note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px}
+.note b{font-size:14.5px;display:block;margin-bottom:2px}
+.note .lo{display:block;font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-top:2px}
+.example{margin:8px 0 0;padding:8px 10px;background:var(--paper);border-radius:8px;font-size:14.5px}
+.example .py{display:block;font-size:12px;color:var(--accent);letter-spacing:.03em}
+.example .lo{display:block;font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;font-size:13px;color:var(--ink-soft)}
+
+/* audio chips */
+.audio-row{display:flex;flex-wrap:wrap;gap:8px}
+.audio-chip{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);border-radius:999px;padding:6px 12px;cursor:pointer;transition:.15s}
+.audio-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.audio-chip.playing{background:var(--accent);border-color:var(--accent);color:#fff}
+.audio-chip.small{margin-left:auto;font-size:12px;padding:4px 10px}
+.audio-hint{margin:10px 0 0;font-size:12px;color:var(--muted)}
+
+/* quiz */
+.quiz-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.q-text{margin:0 0 8px;font-size:15px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts .opt{font-size:13.5px;padding:7px 14px;border-radius:10px;background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+.opts .opt:hover{background:var(--accent-soft);border-color:var(--accent)}
+.opts .opt.correct{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:600}
+.opts .opt.wrong{background:var(--warm-soft);border-color:var(--warm);color:var(--warm)}
+.q-feedback{margin:8px 0 0;font-size:12.5px;color:var(--ink-soft);display:none}
+.q-feedback.show{display:block}
+.quiz-score{margin:10px 0 0;font-size:13px;color:var(--ink-soft);text-align:right}
+
+/* nav */
+.lesson-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:26px auto 50px;font-size:13.5px}
+.lesson-nav a{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;text-decoration:none;color:var(--ink-soft)}
+.lesson-nav a:hover{border-color:var(--accent);color:var(--accent)}
+.lesson-nav a[href]{}
+
+/* hide toggles */
+body.hide-py .py-line,body.hide-py .py-title,body.hide-py .example .py{display:none}
+body.hide-lo .lo-line,body.hide-lo .lo-title,body.hide-lo td.l,body.hide-lo .note .lo,
+body.hide-lo .objectives li .lo,body.hide-lo .example .lo,body.hide-lo .section-head .lo{display:none}
+
+@media print{
+  .topbar,.lesson-nav,.audio,.audio-chip,.opt,.audio-row{display:none !important}
+  body{background:#fff}
+  .section{box-shadow:none;break-inside:avoid-page;border-color:#ccc}
+  .hero{padding-top:0}
+  .line{break-inside:avoid}
+  table{font-size:12px}
+}
+
+@media (max-width:560px){
+  .wrap{width:calc(100% - 24px)}
+  .section{padding:14px;border-radius:14px}
+  .bubble{max-width:82%}
+  .zh-line{font-size:16px}
+  .topbar-inner{height:52px}
+  .back{font-size:12px}
+}
+/* 词性：老挝语为主，中文简称作小字 */
+td.pos .pos-lo{display:block;font-family:"Noto Sans Lao","Leelawadee UI","Phetsarath OT","Lao UI",sans-serif;font-size:12.5px;color:var(--ink-soft);line-height:1.3}
+td.pos .pos-zh{display:block;font-size:10.5px;color:var(--muted);margin-top:1px}
+/* 课本录音：每个 chip 配一个标注下拉 */
+.audio-item{display:inline-flex;align-items:center;gap:6px;margin:0 8px 8px 0}
+.audio-tag{font:inherit;font-size:12px;padding:5px 6px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink-soft);max-width:96px}
+
+/* HSK1 / HSK2 级别页签 */
+.lv-tabs{display:flex;gap:8px;margin:16px 0 0;flex-wrap:wrap}
+.lv-tab{padding:7px 16px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);font-size:14px;background:#fff}
+.lv-tab.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
