@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#c8102e" />
+    <title>老挝学生中文课堂 · ຮຽນຈີນສຳລັບນັກຮຽນລາວ</title>
+    <meta
+      name="description"
+      content="面向老挝中学生的中文学习网站：拼音、日常口语、HSK 一级，中老双语，自动判分练习。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Sans+Lao:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c8102e'/%3E%3Ctext x='32' y='46' font-size='38' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23fff'%3E%E6%B1%89%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body data-page="home">
+    <noscript>
+      <p class="noscript">本网站需要开启 JavaScript 才能显示课程内容 · ເວັບນີ້ຕ້ອງການ JavaScript</p>
+    </noscript>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">汉</span>
+          <span class="brand-text">
+            <b data-i18n="brand.name">老挝学生中文课堂</b>
+            <span data-i18n="brand.sub">中文 · ພາສາຈີນ</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="主导航">
+          <a href="index.html" class="is-active" data-i18n="nav.home">首页</a>
+          <a href="courses.html" data-i18n="nav.courses">全部课程</a>
+          <a href="index.html#features" data-i18n="nav.features">课程特色</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language / ພາສາ">
+          <button class="lang-btn" type="button" data-lang="zh">中文</button>
+          <button class="lang-btn" type="button" data-lang="lo">ລາວ</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="hero-badge" data-i18n="hero.badge">中老双语 · 为老挝中学生设计</span>
+            <h1>
+              <span data-i18n="hero.title1">从拼音开始，</span><br />
+              <em data-i18n="hero.title2">学会说中文</em>
+            </h1>
+            <p class="hero-desc" data-i18n="hero.desc">
+              专为老挝中学生设计的中文学习网站：拼音、日常口语、HSK 一级，每节课都有讲解、视频和自动判分的练习，中老双语随时切换。
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="heroStart" href="#courses" data-i18n="hero.cta1">开始学习</a>
+              <a class="btn btn-outline" href="courses.html" data-i18n="hero.cta2">浏览课程</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <b id="statCourses">3</b>
+                <span data-i18n="stat.courses">门课程</span>
+              </div>
+              <div>
+                <b id="statLessons">9</b>
+                <span data-i18n="stat.lessons">节微课</span>
+              </div>
+              <div>
+                <b id="statQuestions">27</b>
+                <span data-i18n="stat.questions">道练习题</span>
+              </div>
+              <div>
+                <b>2</b>
+                <span data-i18n="stat.langs">种语言</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="blob blob-a"></div>
+            <div class="blob blob-b"></div>
+            <div class="flashcard">
+              <span class="flash-tag" data-i18n="hero.tag">今日一句</span>
+              <div class="flash-han">你好</div>
+              <div class="flash-pinyin">nǐ hǎo</div>
+              <div class="flash-lo">ສະບາຍດີ</div>
+            </div>
+            <div class="float-chip chip-a">HSK 1</div>
+            <div class="float-chip chip-b" data-i18n="hero.chipB">拼音 · 声调</div>
+            <div class="float-card">
+              <div class="row">
+                <span data-i18n="hero.progress">学习进度</span>
+                <b id="heroPct">0%</b>
+              </div>
+              <div class="bar"><i id="heroBar" style="width: 0%"></i></div>
+              <small id="heroProgressText">已学 0 / 9 节课</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 特色 -->
+      <section class="section section-alt" id="features">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Why this site</p>
+              <h2 data-i18n="features.title">为老挝课堂做的四个决定</h2>
+              <p data-i18n="features.desc">
+                不是把现成网课翻译一遍，而是按老挝学生的语言习惯和学习条件重新设计。
+              </p>
+            </div>
+          </div>
+          <div class="feature-grid">
+            <article class="feature">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <ellipse cx="12" cy="12" rx="4" ry="9" />
+                  <path d="M3 12h18" />
+                </svg>
+              </div>
+              <h3 data-i18n="f1.t">中老双语对照</h3>
+              <p data-i18n="f1.d">界面和课文都能一键切换中文、老挝语，看不懂的地方随时对照。</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m8 12.5 2.6 2.6L16.5 9" />
+                </svg>
+              </div>
+              <h3 data-i18n="f2.t">学完就练</h3>
+              <p data-i18n="f2.d">每节课配自动判分练习，答错立刻看到解析，不用等老师批改。</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="7" y="2.5" width="10" height="19" rx="2.5" />
+                  <path d="M11 18.5h2" />
+                </svg>
+              </div>
+              <h3 data-i18n="f3.t">手机也能学</h3>
+              <p data-i18n="f3.d">手机、平板、电脑自适应，教室里的旧电脑打开也不卡。</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 20V10" />
+                  <path d="M10 20V4" />
+                  <path d="M16 20v-7" />
+                  <path d="M22 20H2" />
+                </svg>
+              </div>
+              <h3 data-i18n="f4.t">进度看得见</h3>
+              <p data-i18n="f4.d">学完的课、最好的成绩都保存在本机，不用注册账号。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 课程 -->
+      <section class="section" id="courses">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Courses</p>
+              <h2 data-i18n="courses.title">课程体系</h2>
+              <p data-i18n="courses.desc">从零基础到 HSK 一级，按顺序学或跳着学都可以。</p>
+            </div>
+            <a class="link-arrow" href="courses.html" data-i18n="courses.more">查看全部课程</a>
+          </div>
+          <div class="course-grid" id="courseGrid"></div>
+        </div>
+      </section>
+
+      <!-- 三步 -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Start here</p>
+              <h2 data-i18n="steps.title">三步开始</h2>
+              <p data-i18n="steps.desc">不用等账号开通，打开就能学。</p>
+            </div>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <div class="step-num">1</div>
+              <h3 data-i18n="s1.t">选一门课</h3>
+              <p data-i18n="s1.d">按自己的水平选拼音、日常口语或 HSK 一级。</p>
+            </article>
+            <article class="step">
+              <div class="step-num">2</div>
+              <h3 data-i18n="s2.t">看讲解和视频</h3>
+              <p data-i18n="s2.d">每节课 10—15 分钟，生词表都带老挝语意思。</p>
+            </article>
+            <article class="step">
+              <div class="step-num">3</div>
+              <h3 data-i18n="s3.t">做题拿分</h3>
+              <p data-i18n="s3.d">自动判分，答完马上知道对错和原因。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="cta-band">
+            <div>
+              <h2 data-i18n="cta.title">准备好开始了吗？</h2>
+              <p data-i18n="cta.desc">从第一课“声母 b p m f”开始，10 分钟就能读完。</p>
+            </div>
+            <a class="btn" href="lesson.html?course=pinyin&lesson=p1" data-i18n="cta.btn">进入第一课</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">汉</span>
+          <div>
+            <b data-i18n="brand.name">老挝学生中文课堂</b>
+            <p data-i18n="footer.tagline">中老双语教学示例站 · 内容可替换</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="nav.home">首页</a>
+          <a href="courses.html" data-i18n="nav.courses">全部课程</a>
+          <a href="index.html#features" data-i18n="nav.features">课程特色</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span data-i18n="footer.note">© 2026 示例网站。课程内容与老挝语译文为演示用途。</span>
+        <span data-i18n="footer.built">纯前端原型 · 无需服务器</span>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

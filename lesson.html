@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#c8102e" />
+    <title>课程详情 · 老挝学生中文课堂</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Sans+Lao:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c8102e'/%3E%3Ctext x='32' y='46' font-size='38' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23fff'%3E%E6%B1%89%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body data-page="lesson">
+    <noscript>
+      <p class="noscript">本网站需要开启 JavaScript 才能显示课程内容 · ເວັບນີ້ຕ້ອງການ JavaScript</p>
+    </noscript>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">汉</span>
+          <span class="brand-text">
+            <b data-i18n="brand.name">老挝学生中文课堂</b>
+            <span data-i18n="brand.sub">中文 · ພາສາຈີນ</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="主导航">
+          <a href="index.html" data-i18n="nav.home">首页</a>
+          <a href="courses.html" class="is-active" data-i18n="nav.courses">全部课程</a>
+          <a href="index.html#features" data-i18n="nav.features">课程特色</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language / ພາສາ">
+          <button class="lang-btn" type="button" data-lang="zh">中文</button>
+          <button class="lang-btn" type="button" data-lang="lo">ລາວ</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="lesson-page">
+      <div class="container layout">
+        <aside>
+          <div class="side-card">
+            <a class="side-back" href="courses.html">
+              <span aria-hidden="true">←</span>
+              <span data-i18n="lesson.back">返回课程</span>
+            </a>
+            <div class="side-head" id="sideProgress"></div>
+            <ol class="side-list" id="lessonList"></ol>
+          </div>
+        </aside>
+
+        <article class="lesson-main">
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <a href="index.html" data-i18n="nav.home">首页</a>
+            <span>/</span>
+            <a href="courses.html" data-i18n="nav.courses">全部课程</a>
+            <span>/</span>
+            <a id="crumbCourse" href="courses.html"></a>
+          </nav>
+
+          <h1 class="lesson-title" id="lessonTitle"></h1>
+          <div class="lesson-meta" id="lessonMeta"></div>
+
+          <div class="tabs" role="tablist">
+            <button
+              class="tab-btn is-active"
+              type="button"
+              role="tab"
+              data-tab="text"
+              data-i18n="tab.text"
+            >
+              课文
+            </button>
+            <button class="tab-btn" type="button" role="tab" data-tab="video" data-i18n="tab.video">
+              视频
+            </button>
+            <button class="tab-btn" type="button" role="tab" data-tab="quiz" data-i18n="tab.quiz">
+              练习
+            </button>
+          </div>
+
+          <section class="tab-panel" id="tabText" role="tabpanel"></section>
+          <section class="tab-panel" id="tabVideo" role="tabpanel" hidden></section>
+          <section class="tab-panel" id="tabQuiz" role="tabpanel" hidden></section>
+
+          <div class="pager" id="lessonPager"></div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">汉</span>
+          <div>
+            <b data-i18n="brand.name">老挝学生中文课堂</b>
+            <p data-i18n="footer.tagline">中老双语教学示例站 · 内容可替换</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="nav.home">首页</a>
+          <a href="courses.html" data-i18n="nav.courses">全部课程</a>
+          <a href="index.html#features" data-i18n="nav.features">课程特色</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span data-i18n="footer.note">© 2026 示例网站。课程内容与老挝语译文为演示用途。</span>
+        <span data-i18n="footer.built">纯前端原型 · 无需服务器</span>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
